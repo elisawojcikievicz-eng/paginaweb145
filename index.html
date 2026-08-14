@@ -3,117 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrbanStyle - Gerador de Looks</title>
+    <title>LookRápido | Seu Estilo em Segundos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">UrbanStyle</div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#gerador-look">Montar Look</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-            </ul>
-        </nav>
+        <h1>💖 LookRápido 💖</h1>
+        <p>Monte seu look perfeito de forma rápida e prática!</p>
     </header>
 
-    <section id="inicio" class="hero">
-        <h1>Crie o Look Perfeito</h1>
-        <p>Combine peças rapidamente e receba ideias práticas para o seu dia a dia.</p>
-        <a href="#gerador-look" class="btn">Montar Meu Look</a>
-    </section>
+    <main class="container">
+        <h2>O que você vai fazer hoje?</h2>
+        <p>Escolha a ocasião e nós te ajudamos a decidir!</p>
 
-    <section id="gerador-look" class="gerador-section">
-        <h2>Ideias de Looks Práticos</h2>
-        <p class="subtitulo">Escolha um estilo para ver uma combinação pronta de peças:</p>
-        
-        <div class="filtros-estilo">
-            <button class="btn-filtro active" onclick="mostrarLook('casual')">Casual</button>
-            <button class="btn-filtro" onclick="mostrarLook('trabalho')">Trabalho / Formal</button>
-            <button class="btn-filtro" onclick="mostrarLook('noite')">Noite / Festa</button>
+        <div class="cards-ocasioes">
+            <div class="card">
+                <h3>🌸 Casual / Dia a Dia</h3>
+                <p>Jeans confortável, t-shirt estilosa e tênis branco.</p>
+                <button class="btn-escolher">Ver Inspiração</button>
+            </div>
+
+            <div class="card">
+                <h3>✨ Balada / Noite</h3>
+                <p>Vestido ajustado, salto alto e acessórios brilhantes.</p>
+                <button class="btn-escolher">Ver Inspiração</button>
+            </div>
+
+            <div class="card">
+                <h3>💼 Trabalho / Reunião</h3>
+                <p>Blazer rosa shock, calça de alfaiataria e salto bloco.</p>
+                <button class="btn-escolher">Ver Inspiração</button>
+            </div>
         </div>
-
-        <div class="container-look">
-            
-            <div id="casual" class="look-grid ativo">
-                <div class="card-look">
-                    <span class="tag">Parte de Cima</span>
-                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=400" alt="Camiseta Básica">
-                    <h3>Camiseta Oversized Branca</h3>
-                </div>
-                <div class="card-look">
-                    <span class="tag">Parte de Baixo</span>
-                    <img src="https://images.unsplash.com/photo-1542272604-780c36856f61?w=400" alt="Calça Jeans">
-                    <h3>Calça Jeans Wide Leg</h3>
-                </div>
-                <div class="card-look">
-                    <span class="tag">Calçado / Acessório</span>
-                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400" alt="Tênis">
-                    <h3>Tênis Branco Urbano</h3>
-                </div>
-            </div>
-
-            <div id="trabalho" class="look-grid">
-                <div class="card-look">
-                    <span class="tag">Parte de Cima</span>
-                    <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=400" alt="Camisa">
-                    <h3>Camisa Social Linho</h3>
-                </div>
-                <div class="card-look">
-                    <span class="tag">Parte de Baixo</span>
-                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400" alt="Calça Alfaiataria">
-                    <h3>Calça Alfaiataria Slim</h3>
-                </div>
-                <div class="card-look">
-                    <span class="tag">Calçado / Acessório</span>
-                    <img src="https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=400" alt="Sapato">
-                    <h3>Mocassim de Couro</h3>
-                </div>
-            </div>
-
-            <div id="noite" class="look-grid">
-                <div class="card-look">
-                    <span class="tag">Parte de Cima</span>
-                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400" alt="Jaqueta">
-                    <h3>Jaqueta de Couro Preta</h3>
-                </div>
-                <div class="card-look">
-                    <span class="tag">Parte de Baixo</span>
-                    <img src="https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=400" alt="Calça Escura">
-                    <h3>Calça Jeans Black</h3>
-                </div>
-                <div class="card-look">
-                    <span class="tag">Calçado / Acessório</span>
-                    <img src="https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=400" alt="Bota">
-                    <h3>Bota de Couro Chesterfield</h3>
-                </div>
-            </div>
-
-        </div>
-    </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 UrbanStyle. Escolha seu look no seu tempo.</p>
+        <p>&copy; 2026 LookRápido - Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        function mostrarLook(estilo) {
-            // Esconde todas as combinações
-            const todosLooks = document.querySelectorAll('.look-grid');
-            todosLooks.forEach(look => look.classList.remove('ativo'));
-
-            // Remove o botão ativo
-            const botoes = document.querySelectorAll('.btn-filtro');
-            botoes.forEach(btn => btn.classList.remove('active'));
-
-            // Mostra a combinação selecionada
-            document.getElementById(estilo).classList.add('ativo');
-
-            // Marca o botão clicado como ativo
-            event.currentTarget.classList.add('active');
-        }
-    </script>
 </body>
 </html>
